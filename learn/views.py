@@ -45,8 +45,8 @@ def addRedi(request,a,b):
 
 
 def home(request):
-    List = ['自强学堂', '渲染Json到模板']
-    Dict = {'site': '自强学堂', 'author': '涂伟忠'}
+    List = ['django学习', '渲染Json到模板']
+    Dict = {'site': '123', 'author': 'zqj'}
     return render(request, 'home.html', {
         'List': json.dumps(List),
         'Dict': json.dumps(Dict)
