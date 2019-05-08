@@ -21,12 +21,14 @@ from learn import views as learn_views
 
 urlpatterns = [
    # url(r'^$', learn_views.home,name='home'),  # new
-  # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^add/$',learn_views.add,name='add'),
     url(r'^add/(\d+)/(\d+)/$', learn_views.add2, name='add2'),
     url(r'^redirect/(\d+)/(\d+)/$', learn_views.addRedi),
     url(r'^home/$', learn_views.home, name='home'),
     url(r'^upload/$', learn_views.uploadpic, name='uploadpic'),
-    url(r'^catinfo/$',learn_views.catinfo,name='catinfo')
-    # url(r'^blog/', include('blog.urls')),
+    url(r'^catinfo/$',learn_views.catinfo,name='catinfo'),
+    url(r'^blog/',include('blog.urls',namespace='blog',app_name='blog')),
+    url(r'^account/', include('account.urls', namespace='account', app_name='account'))
+
 ]

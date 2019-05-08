@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>登录</h1>
+<div id="aa">
+<ul>
+<li><a href="{}">BLOG</a></li>
+</ul>
+    <ul>
+        <li><a href="">username</a> </li>
+        <li><a href="../logout">Logout</a></li>
+    </ul>
+</div>
+<form action="." method="post">
+    {% csrf_token %}
+                <p>用户名: <input type="text" name="username" /></p>
+                <p>密&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="text" name="password" /></p>
+<input type="submit" value="Login">
+            </form>
+
+</body>
+</html>
