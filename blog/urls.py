@@ -1,9 +1,11 @@
 
-from django.urls import *
-from django.conf.urls import include, url
-from blog import views
 
-urlpatterns = [
-        url('^testblog/$',views.testblog,name='testblog'),
-        url('^testjq/$', views.testjquery, name='testjq'),
-    ]
+
+from django.conf.urls import url
+from . import views
+
+urlpatterns=[url(r'^$',views.blog_title,name="blog_title"),
+             url(r'(?P<article_id>\d)/$',views.blog_article,name="blog_detail")
+
+             ]
+

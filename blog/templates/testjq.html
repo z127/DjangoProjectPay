@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../static/js/jquery-3.3.1.min.js"></script>
+    <title>Title</title>
+<script>
+    $(function () {
+        //给按钮绑定事件
+        $("#btn2").click(function () {
+
+            $("#div1").html("JQ方式成功修改内容");
+
+        });
+    });
+
+</script>
+</head>
+<body>
+    <input type="button" value="js修改div内容"  id="btn2">
+    <div id="div1">
+        这里的内容会被替换
+    </div>
+
+</body>
+</html>

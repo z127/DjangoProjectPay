@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register User</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <p>if you are a user, <strong> <a href="/account/login">Login</a></strong>,please</p>
+    <p>or register.</p>
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="form-group">
+              <p>用户名: <input type="text" name="username" /></p>
+                <p> 电子邮箱:<input type="text" name="email"></p>
+                <p>密码: <input type="password" name="password" /></p>
+              <p>确认密码: <input type="password" name="password2" /></p>
+        <input type="submit" value="REGISTER">
+        </div>
+    </form>
+</body>
+</html>

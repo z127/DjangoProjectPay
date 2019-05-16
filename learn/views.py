@@ -30,6 +30,7 @@ def catinfo(request):
     if request.method == "POST":
         f1 = request.FILES['pic1']
         fname = '%s/pic/%s' % (settings.MEDIA_ROOT, f1.name)
+        print(fname)
         with open(fname, 'wb') as pic:
             for c in f1.chunks():
                 pic.write(c)
@@ -61,7 +62,8 @@ def uploadpic(request):
 def home(request):
     List = ['django学习', '渲染Json到模板']
     Dict = {'site': '123', 'author': 'zqj'}
-    return render(request, 'home.html', {
+    return render(request, 'learn/home.html', {
         'List': json.dumps(List),
         'Dict': json.dumps(Dict)
     })
+
