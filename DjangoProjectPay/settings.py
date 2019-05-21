@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+#D:\Anaconda\Lib\site-packages\django
+
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'password_reset',
     'learn',
     'people',
     'blog',
@@ -141,3 +145,11 @@ STATICFILES_FINDERS = (
 )
 
 LOGIN_REDIRECT_URL='/home'
+
+EMAIL_HOST='smtp.sina.com'
+EMAIL_HOST_USER='zqj16210240057@sina.com'
+EMAIL_HOST_PASSWORD='z471365897'
+EMAIL_PORT=25
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL = "zqj16210240057@sina.com"
+#EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'

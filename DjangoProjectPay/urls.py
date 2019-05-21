@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^upload/$', learn_views.uploadpic, name='uploadpic'),
     url(r'^catinfo/$',learn_views.catinfo,name='catinfo'),
     url(r'^blog/',include('blog.urls',namespace='blog',app_name='blog')),
-    url(r'^account/', include('account.urls', namespace='account', app_name='account'))
+    url(r'^account/', include('account.urls', namespace='account', app_name='account')),
+                 url(r'pwd_reset/', include('password_reset.urls')),
 
 ]

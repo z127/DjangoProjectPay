@@ -9,18 +9,19 @@
 <h1>登录</h1>
 <div id="aa">
 <ul>
-<li><a href="{}">BLOG</a></li>
+<li><a href="">BLOG</a></li>
 </ul>
     <ul>
         <li><a href="">username</a> </li>
         <li><a href="../logout">Logout</a></li>
+           <li><a href="../password-change">修改密码</a></li>
     </ul>
 </div>
 <form action="." method="post">
     {% csrf_token %}
                 <p>用户名: <input type="text" name="username" /></p>
                 <p>密&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="text" name="password" /></p>
-<input type="submit" value="Login">
+            <input type="submit" value="Login">
             </form>
 
 </body>
